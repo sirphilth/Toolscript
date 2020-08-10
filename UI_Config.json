@@ -1,0 +1,177 @@
+{
+   "output_file": "settings.json",
+   "only_live": {
+       "type": "checkbox",
+       "value": "True",
+       "label": "Script works only live",
+       "tooltip": "Checkbox for the script to only work live",
+       "group" : "General Settings"
+   },
+   "exempt": {
+       "type": "checkbox",
+       "value": "True",
+       "label": "Caster is exempt from tool use",
+       "tooltip": "Enable when Caster doesn't need a tool to use commands (only works for Twitch)",
+       "group" : "General Settings"
+   },
+   "tool_name": {
+       "type": "textbox",
+       "value": "Pickaxe",
+       "label": "Tool name",
+       "tooltip": "Tool name",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "store_command": {
+       "type": "textbox",
+       "value": "!store",
+       "label": "Store command",
+       "tooltip": "Command to open store",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "store_message": {
+       "type": "textbox",
+       "value": "$user current $nametools in store is: $tools. Use $buycommand Type to buy the tool.",
+       "label": "Store message",
+       "tooltip": "Message for store\r\n$nametools - name of tools\r\n$user - username\r\n$tools - Gets formatted with the textbox below\r\n$buycommand - the buy command",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "format_store": {
+       "type": "textbox",
+       "value": "[$type] - Durability: $durability, Cost: $price",
+       "label": "Format of $tools in Store Message",
+       "tooltip": "Format of the $tools in store message\r\n$type - tool type\r\n$durability - durability\r\n$price - price",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "buy_command": {
+       "type": "textbox",
+       "value": "!buy",
+       "label": "Buy command",
+       "tooltip": "Buy command used as !buy type",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "buy_message": {
+       "type": "textbox",
+       "value": "$user has just bought $tooltype $nametools for $price $currencyname",
+       "label": "Buy message",
+       "tooltip": "Message when a tool gets bought\r\n$user - username\r\n$price - price\r\n$tooltype - type of tool\r\n$nametools - general tool name\r\n$currencyname - currency of channel",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "cant_buy_message": {
+       "type": "textbox",
+       "value": "$user you don't have enough currency to buy that!",
+       "label": "Can't Buy message",
+       "tooltip": "Message when a tool can't be bought\r\n$user - username",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "buy_incorrect": {
+       "type": "textbox",
+       "value": "$user that isn't a valid option to buy",
+       "label": "Incorrect buy option",
+       "tooltip": "Message when a tool can't be bought\r\n$user - username",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "status_command": {
+       "type": "textbox",
+       "value": "!mystatus",
+       "label": "Status command",
+       "tooltip": "command for checking your current tool status\r\n$user - username",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "status_message": {
+       "type": "textbox",
+       "value": "$user currently has equipped [$tooltype $nametools with $durability durability]",
+       "label": "Status message",
+       "tooltip": "Status message when tool is equipped\r\n$user - username\r\n$tooltype - type of tool\r\n$nametools - name of tools\r\n$durability - durability",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "no_status_message": {
+       "type": "textbox",
+       "value": "$user you currently have no tool equipped. use $buycommand to buy a tool",
+       "label": "Status message for no tool equipped",
+       "tooltip": "Status message when no tool is equipped\r\n$user - user\r\n$buycommand - command for store",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "tool_used_message": {
+       "type": "textbox",
+       "value": "$user used his $tooltype $nametools to activate this command.",
+       "label": "Message for using a command with tool use",
+       "tooltip": "Message when tool is used\r\n$user - user\r\n$tooltype - tool type\r\n$nametools - name of tools",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "tool_broke": {
+       "type": "textbox",
+       "value": "$user used his $tooltype $nametools but the durability dropped to 0! Your tool is now broken!",
+       "label": "Message for when tool breaks",
+       "tooltip": "Message when tool is used\r\n$user - user\r\n$tooltype - tool type\r\n$nametools - name of tools",
+       "function": "",
+       "group": "Message Settings"
+   },
+   "AlterTool_command": {
+       "type": "textbox",
+       "value": "!altertool",
+       "label": "Command for adding/deleting tools",
+       "tooltip": "Command for adding/deleting tools",
+       "function": "",
+       "group": "Command Settings"
+    },
+   "AddTool_message_succes": {
+       "type": "textbox",
+       "value": "$user the tool has been succesfully added",
+       "label": "Message for adding tools",
+       "tooltip": "Message for adding tools\r\n$user - username",
+       "function": "",
+       "group": "Command Settings"
+    },
+    "Altertool_message_fail": {
+        "type": "textbox",
+        "value": "$user the syntax is [$addtool $addformat] for adding a tool and [$addtool -toolname] for removing a tool.",
+        "label": "Message for failing to add tools",
+        "tooltip": "Message for failing to add tools\r\n$user - username\r\n$alter - alter tool command\r\n$addformat - format for adding tools",
+        "function": "",
+        "group": "Command Settings"
+     },
+     "RemoveTool_message_succes": {
+         "type": "textbox",
+         "value": "$user the tool has been removed",
+         "label": "Message for removing tools",
+         "tooltip": "Message for removing to add tools\r\n$user - username",
+         "function": "",
+         "group": "Command Settings"
+      },
+     "RemoveTool_message_fail": {
+         "type": "textbox",
+         "value": "$user can't remove tool (might not exist).",
+         "label": "Message for failing to remove tools",
+         "tooltip": "Message for failing to remove tools\r\n$user - username\r\n$alter - alter command",
+         "function": "",
+         "group": "Command Settings"
+      },
+   "opentoolfile": {
+      "type": "button",
+      "label": "open tool file",
+      "tooltip": "read this!",
+      "wsevent": "",
+      "function": "opentool",
+      "group": ""
+   },
+      "btnreadme": {
+      "type": "button",
+      "label": "open readme",
+      "tooltip": "read this!",
+      "wsevent": "",
+      "function": "openreadme",
+      "group": ""
+   }
+}
